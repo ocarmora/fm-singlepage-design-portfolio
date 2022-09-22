@@ -239,6 +239,7 @@ footer {
     grid-template-columns: auto auto auto auto;
     margin-top: 64px;
   }
+
   p {
     font-size: $body_medium;
     line-height: 28px;
@@ -313,5 +314,98 @@ footer {
 
   footer {
     margin-top: 56px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 1110px;
+  }
+
+  .hero {
+    margin-top: 66px;
+
+    h1 {
+      font-size: $heading_large;
+    }
+
+    p {
+      margin-top: 23px;
+      margin-bottom: 0;
+      padding: 0 165px;
+    }
+  }
+
+  .services-gallery {
+    grid-template-columns: auto auto auto auto auto auto;
+    margin-top: 80px;
+  }
+
+  .services-gallery {
+    #graphic-design {
+      grid-area: 1 / 1 / 3 / 3; // OK
+    }
+
+    #ui-ux {
+      grid-area: 1 / 3 / 1 / 4;
+    }
+
+    #apps {
+      grid-area: 1 / 4 / 1 / 5;
+    }
+
+    #photography {
+      grid-area: 1 / 5 / 1 / 7;
+    }
+
+    #illustrations {
+      grid-area: 2 / 3 / 2 / 5;
+    }
+
+    #motion-graphic {
+      grid-area: 2 / 5 / 2 / 7;
+      height: auto;
+    }
+  }
+
+  .presentation {
+    div {
+      width: 50%;
+    }
+
+    &__image {
+      position: relative;
+      left: 0;
+      padding-left: 0;
+      text-align: left;
+
+      img {
+        max-width: 445px;
+      }
+    }
+
+    &__text {
+      padding-right: 15px;
+
+      h2 {
+        font-size: $heading_medium;
+      }
+
+      p {
+        margin-top: 34px;
+      }
+
+      .btn {
+        margin-top: 32px;
+      }
+    }
   }
 }
