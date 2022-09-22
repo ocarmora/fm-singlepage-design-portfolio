@@ -1,45 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/glider-js/1.7.7/glider.min.css"
+    integrity="sha512-YM6sLXVMZqkCspZoZeIPGXrhD9wxlxEF7MzniuvegURqrTGV2xTfqq1v9FJnczH+5OGFl5V78RgHZGaK34ylVg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="styles/styles.css">
+
   <title>Frontend Mentor | Single-page design portfolio</title>
 </head>
+
 <body>
 
-  Free Consultation
+  <header>
+    <img src="assets/logo.svg" alt="Logo">
+    <a href="#" class="btn btn--dark">Free Consultation</a>
+  </header>
 
-  Design solutions made easy
+  <section class="hero">
+    <h1>Design solutions made easy</h1>
+    <p> With over ten years of experience in various design disciplines, I’m your one-stop shop for your design needs.
+    </p>
+  </section>
 
-  With over ten years of experience in various design disciplines, I’m your one-stop shop for your design needs.
+  <section class="services-gallery">
+    <figure id="graphic-design" class="gallery-item square-large">
+      <img src="assets/pattern-graphic-design.svg" alt="">
+      <figcaption>Graphic Design</figcaption>
+    </figure>
+    <figure id="ui-ux" class="gallery-item square-small">
+      <img src="assets/pattern-ui-ux.svg" alt="">
+      <figcaption>UI/UX</figcaption>
+    </figure>
+    <figure id="apps" class="gallery-item square-small">
+      <img src="assets/pattern-apps.svg" alt="">
+      <figcaption>Apps</figcaption>
+    </figure>
+    <figure id="illustrations" class="gallery-item rectangle">
+      <img src="assets/pattern-illustrations.svg" alt="">
+      <figcaption>Illustrations</figcaption>
+    </figure>
+    <figure id="photography" class="gallery-item rectangle">
+      <img src="assets/pattern-photography.svg" alt="">
+      <figcaption>Photography</figcaption>
+    </figure>
+    <figure id="motion-graphic" class="gallery-item rectangle">
+      <img src="assets/pattern-motion-graphics.svg" alt="">
+      <figcaption>Motion Graphic</figcaption>
+    </figure>
+  </section>
 
-  Graphic Design
-  UI/UX
-  Apps
-  Photography
-  Illustrations
-  Motion Graphics
+  <article class="presentation">
+    <div class="presentation__image">
+      <img src="assets/image-amy.webp" alt="Amy">
+    </div>
+    <div class="presentation__text">
+      <h2>I’m Amy, and I’d love to work on your next project</h2>
+      <p>I love working with others to create beautiful design solutions. I’ve designed everything from brand
+        illustrations to complete mobile apps. I’m also handy with a camera!</p>
+      <a href="#" class="btn btn--orange">Free Consultation</a>
+    </div>
+  </article>
 
-  I’m Amy, and I’d love to work on your next project
 
-  I love working with others to create beautiful design solutions. I’ve designed everything from brand illustrations 
-  to complete mobile apps. I’m also handy with a camera!
+  <section class="image-carrousel">
+    <h2>My Work</h2>
+    <div class="carrousel">
+      <img src="assets/image-slide-1.jpg" alt="" class="carrousel__item">
+      <img src="assets/image-slide-2.jpg" alt="" class="carrousel__item">
+      <img src="assets/image-slide-3.jpg" alt="" class="carrousel__item">
+      <img src="assets/image-slide-4.jpg" alt="" class="carrousel__item">
+      <img src="assets/image-slide-5.jpg" alt="" class="carrousel__item">
+    </div>
 
-  Free Consultation
+    <div class="carrousel__buttons">
+      <div class="carrousel__button carrousel-button-left">
+        <img src="assets/icon-arrow-left.svg" alt="">
+      </div>
+      <div class="carrousel__button carrousel-button-right">
+        <img src="assets/icon-arrow-right.svg" alt="">
+      </div>
+    </div>
+  </section>
 
-  My Work
+  <article class="call-to-action">
+    <h2>Book a call with me</h2>
+    <p>I’d love to have a chat to see how I can help you. The best first step is for us to discuss your project during a
+      free consultation. Then we can move forward from there.</p>
+    <a href="#" class="btn btn--orange">Free Consultation</a>
+  </article>
 
-  Book a call with me
 
-  I’d love to have a chat to see how I can help you. The best first step is for us to discuss your project during a 
-  free consultation. Then we can move forward from there.
+  <footer>
+    <img src="assets/logo.svg" alt="Logo">
+    <a href="#" class="btn btn--dark">Free Consultation</a>
+  </footer>
 
-  Free Consultation
-
-  Free Consultation
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/glider-js/1.7.7/glider.min.js"></script>
+  <script>
+    window.addEventListener('load', function () {
+      new Glider(document.querySelector('.carrousel'), {
+        slidesToScroll: 1,
+        slidesToShow: 1.3,
+        arrows: {
+          prev: '.carrousel-button-left',
+          next: '.carrousel-button-right'
+        }
+      })
+    })
+  </script>
 </body>
+
 </html>
