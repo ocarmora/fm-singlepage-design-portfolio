@@ -43,9 +43,15 @@ footer {
 .btn--dark {
   background-color: #030303;
 }
+.btn--dark:hover {
+  background-color: #755cde;
+}
 
 .btn--orange {
   background-color: #eb7565;
+}
+.btn--orange:hover {
+  background-color: #f6a560;
 }
 
 .hero {
@@ -164,6 +170,9 @@ footer {
   padding: 24px;
   border-radius: 50%;
   cursor: pointer;
+}
+.carrousel__buttons .carrousel__button:hover {
+  background-color: #755cde;
 }
 
 .call-to-action {
@@ -333,6 +342,19 @@ footer {
   }
   .presentation__text .btn {
     margin-top: 32px;
+  }
+  .call-to-action {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .call-to-action div {
+    text-align: left;
+    max-width: 540px;
+  }
+  .call-to-action a {
+    display: block;
   }
 }
 
